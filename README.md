@@ -1,5 +1,5 @@
 
-# Encrypt 🔐
+# Encrypt
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -24,24 +24,6 @@ You can install the development version of encrypt from
 ``` r
 # install.packages("devtools")
 devtools::install_github("austinw8/encrypt")
-#> Using GitHub PAT from the git credential store.
-#> Downloading GitHub repo austinw8/encrypt@HEAD
-#> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>       ✔  checking for file 'C:\Users\austi\AppData\Local\Temp\RtmpgTxPdO\remotes68706efa3fb8\austinw8-encrypt-505479f/DESCRIPTION' (354ms)
-#>       ─  preparing 'encrypt':
-#>    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information
-#>       ─  checking for LF line-endings in source and make files and shell scripts (421ms)
-#>       ─  checking for empty or unneeded directories
-#>       ─  building 'encrypt_0.0.0.9000.tar.gz'
-#>      
-#> 
-#> Installing package into 'C:/Users/austi/AppData/Local/Temp/RtmpM1u9eb/temp_libpath19c439f43a6f'
-#> (as 'lib' is unspecified)
-```
-
-``` r
-# install.packages("devtools")
-devtools::install_github("austinw8/encrypt")
 ```
 
 ## Ciphers
@@ -59,8 +41,10 @@ library(encrypt)
 
 caesar_cipher("attack at dawn", 3)
 #> [1] "dwwdfn dw gdzq"
+
 caesar_cipher("12345", 5)
 #> [1] "67890"
+
 caesar_cipher("abcde", -2)
 #> [1] "yzabc"
 ```
@@ -80,6 +64,7 @@ library(encrypt)
 
 atbash_cipher("Hebrew alphabet")
 #> [1] "svyivd zokszyvg"
+
 atbash_cipher("svyivd zokszyvg")
 #> [1] "hebrew alphabet"
 ```
@@ -100,6 +85,7 @@ library(encrypt)
 
 vigenere_cipher("Short cuts make long delays", "ring")
 #> [1] "jpbxk khzj unqv tbtx lrrrgf"
+
 vigenere_cipher("make it happen", "math")
 #> [1] "yadl ut ahbpxu"
 ```
@@ -115,6 +101,7 @@ library(encrypt)
 
 morse_code("Holy biscuits batman")
 #> [1] ".... --- .-.. -.-- / -... .. ... -.-. ..- .. - ... / -... .- - -- .- -."
+
 morse_code("12345")
 #> [1] ".---- ..--- ...-- ....- ....."
 ```
@@ -138,8 +125,10 @@ library(encrypt)
 
 polybius_square("Hello friends")
 #> [1] "23 15 31 31 34   21 42 24 15 33 14 43"
+
 polybius_square("3511331311251543")
 #> [1] "pancakes"
+
 polybius_square("24 45 33 24 34 42")
 #> [1] "iunior"
 ```

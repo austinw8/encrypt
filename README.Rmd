@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Encrypt 🔐
+# Encrypt 
 
 <!-- badges: start -->
 
@@ -26,11 +26,6 @@ Secret codes can be used to send fun messages between friends. Encrypt makes it 
 ## Installation
 
 You can install the development version of encrypt from [GitHub](https://github.com/) with:
-
-```{r}
-# install.packages("devtools")
-devtools::install_github("austinw8/encrypt")
-```
 
 ``` r
 # install.packages("devtools")
@@ -49,7 +44,9 @@ This is a basic example of how to use `caesar_cipher()`:
 library(encrypt)
 
 caesar_cipher("attack at dawn", 3)
+
 caesar_cipher("12345", 5)
+
 caesar_cipher("abcde", -2)
 ```
 
@@ -63,6 +60,7 @@ Because the alphabet is simply mirrorwd, `atbash_cipher(`) can both encrypt and 
 library(encrypt)
 
 atbash_cipher("Hebrew alphabet")
+
 atbash_cipher("svyivd zokszyvg")
 ```
 
@@ -76,6 +74,7 @@ Using `vigenere_cipher()` is as simple as entering the phrase you want encoded f
 library(encrypt)
 
 vigenere_cipher("Short cuts make long delays", "ring")
+
 vigenere_cipher("make it happen", "math")
 ```
 
@@ -87,6 +86,7 @@ vigenere_cipher("make it happen", "math")
 library(encrypt)
 
 morse_code("Holy biscuits batman")
+
 morse_code("12345")
 ```
 
@@ -102,7 +102,9 @@ Here's an example of how to use `polybius_square()`:
 library(encrypt)
 
 polybius_square("Hello friends")
+
 polybius_square("3511331311251543")
+
 polybius_square("24 45 33 24 34 42")
 ```
 
