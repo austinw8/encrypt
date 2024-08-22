@@ -1,3 +1,16 @@
+#' Atbash Cipher
+#'
+#' A type of substitution cipher where the alphabet is reversed.
+#'
+#' @param text A character string to be encrypted or decrypted.
+#'
+#' @return A character string.
+#' @export
+#'
+#' @examples
+#' atbash_cipher("Hebrew alphabet")
+#' atbash_cipher("svyivd zokszyvg")
+
 atbash_cipher <- function(text) {
   if(grepl("[^a-zA-Z[:space:][:punct:]]", text)) {
     stop("Error: The input must contain only alphabetical characters.")

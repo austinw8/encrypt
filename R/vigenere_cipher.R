@@ -1,3 +1,17 @@
+#' Vigenere Cipher
+#'
+#' A cipher where each letter in the plaintext is shifted based on a keyword.
+#'
+#' @param text A character string to be encrypted.
+#' @param keyword A character string serving as the keyword for the cipher. The key is used to determine the letter shifts in the Vigenère cipher.
+#'
+#' @return A character string where each letter in the input text is shifted according to the corresponding letter in the key.
+#' @export
+#'
+#' @examples
+#' vigenere_cipher("Short cuts make long delays", "ring")
+#' vigenere_cipher("make it happen", "math")
+
 vigenere_cipher <- function(text, keyword) {
   if(grepl("[^a-zA-Z[:space:][:punct:]]", text)) {
     stop("Error: The input must contain only alphabetical characters.")
